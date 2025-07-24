@@ -7,7 +7,7 @@
 class Bureaucrat {
 public:
 	Bureaucrat(const std::string& name, int grade);
-	~Bureaucrat();
+	~Bureaucrat() = default;
 	Bureaucrat(const Bureaucrat& other) = default;
 	Bureaucrat& operator=(const Bureaucrat& other) = default;
 	const std::string& getName() const;
