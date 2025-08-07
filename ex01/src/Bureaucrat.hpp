@@ -15,20 +15,20 @@ public:
 	int getGrade() const;
 	void incrementGrade();
 	void decrementGrade();
+
+	// Exception classes
+	class GradeTooHighException : public std::exception {
+	public:
+		const char* what() const noexcept override;
+	};
+	class GradeTooLowException : public std::exception {
+	public:
+		const char* what() const noexcept override;
+	};
+
 private:
 	const std::string	name_;
 	int					grade_;
-};
-
-
-// Exception classes
-class GradeTooHighException : public std::exception {
-public:
-	const char* what() const noexcept override;
-};
-class GradeTooLowException : public std::exception {
-public:
-	const char* what() const noexcept override;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);
