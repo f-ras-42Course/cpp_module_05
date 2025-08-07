@@ -6,6 +6,7 @@
 
 class Bureaucrat {
 public:
+	Bureaucrat() = delete;
 	Bureaucrat(const std::string& name, int grade);
 	~Bureaucrat() = default;
 	Bureaucrat(const Bureaucrat& other) = default;
@@ -15,8 +16,8 @@ public:
 	void incrementGrade();
 	void decrementGrade();
 private:
-	std::string name_;
-	int 		grade_;
+	const std::string	name_;
+	int					grade_;
 };
 
 

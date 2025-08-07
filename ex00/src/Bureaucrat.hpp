@@ -6,6 +6,7 @@
 
 class Bureaucrat {
 public:
+	Bureaucrat() = delete;
 	Bureaucrat(const std::string& name, int grade);
 	~Bureaucrat() = default;
 	Bureaucrat(const Bureaucrat& other) = default;
