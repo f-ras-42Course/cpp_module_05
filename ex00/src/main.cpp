@@ -7,11 +7,11 @@ int main() {
 
 		tom.incrementGrade();
 		bobbie.decrementGrade();
-		
-		// tom.incrementGrade();
-		// bobbie.decrementGrade();
-		// Bureaucrat gerard("Gerard", 151);
-		// Bureaucrat mitchel("Mitchel", -1);
+		// tom.incrementGrade(); // Uncommenting this line will throw an exception because tom's grade is already at the maximum (1)
+		// bobbie.decrementGrade(); // Uncommenting this line will throw an exception because bobbie's grade is already at the minimum (150)
+
+		// Bureaucrat gerard("Gerard", 151); // Uncommenting this line will throw an exception because the grade is too low
+		// Bureaucrat mitchel("Mitchel", -1); // Uncommenting this line will throw an exception because the grade is too high
 
 		std::cout << bobbie;
 		std::cout << tom;

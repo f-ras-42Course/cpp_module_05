@@ -9,6 +9,18 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade)
 	}
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat& other)
+	: name_(other.name_), grade_(other.grade_) {
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) {
+	if (this != &other) {
+		grade_ = other.grade_;
+	}
+	return *this;
+}
+
+
 const std::string &Bureaucrat::getName() const
 {
 	return name_;
