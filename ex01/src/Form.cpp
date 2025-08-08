@@ -62,6 +62,6 @@ std::ostream& operator<<(std::ostream& os, const Form& form) {
 	   << "\n| Signed: " << (form.isSigned() ? "Yes" : "No")
 	   << "\n| Minimum Sign Grade: " << form.getMinimumSignGrade()
 	   << "\n| Minimum Execute Grade: " << form.getMinimumExecuteGrade()
-	   << "\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
+	   << "\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
 	return os;
 }

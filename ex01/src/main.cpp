@@ -13,13 +13,13 @@ int main()
 		Form form1("Taxation Sheet", 50, 30);
 		Form form2("Confidential Document", 5, 1);
 		
-		std::cout << "\nBureaucrats:" << std::endl;
-		std::cout << johnny << std::endl;
-		std::cout << alex << std::endl;
+		std::cout << "\nBureaucrats:\n";
+		std::cout << johnny;
+		std::cout << alex;
 		
-		std::cout << "\nForms:" << std::endl;
-		std::cout << form1 << std::endl;
-		std::cout << form2 << std::endl;
+		std::cout << "\nForms:\n";
+		std::cout << form1;
+		std::cout << form2;
 		
 		std::cout << "\n---- Signing Tests ----\n";
 		johnny.signForm(form1);  // Should work

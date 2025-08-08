@@ -2,19 +2,40 @@
 
 int main() {
 	try {
+		std::cout << "====| Creating Bureaucrats and changing values\n";
 		Bureaucrat bobbie("Bobbie", 149);
-		Bureaucrat tom("Tom", 2);
-
-		tom.incrementGrade();
-		bobbie.decrementGrade();
-		// tom.incrementGrade(); // Uncommenting this line will throw an exception because tom's grade is already at the maximum (1)
-		// bobbie.decrementGrade(); // Uncommenting this line will throw an exception because bobbie's grade is already at the minimum (150)
-
-		// Bureaucrat gerard("Gerard", 151); // Uncommenting this line will throw an exception because the grade is too low
-		// Bureaucrat mitchel("Mitchel", -1); // Uncommenting this line will throw an exception because the grade is too high
-
 		std::cout << bobbie;
+		bobbie.decrementGrade();
+		std::cout << bobbie;
+		Bureaucrat tom("Tom", 2);
 		std::cout << tom;
+		tom.incrementGrade();
+		std::cout << tom;
+
+		std::cout << "\n====| Over-incrementing and decrementing grades\n";
+		try {
+			tom.incrementGrade();
+		} catch (std::exception & e) {
+			std::cerr << "Exception caught for Tom: " << e.what() << std::endl;
+		}
+		try {
+			bobbie.decrementGrade();
+		} catch (std::exception & e) {
+			std::cerr << "Exception caught for Bobbie: " << e.what() << std::endl;
+		}
+
+		std::cout << "\n====| Testing exceptions for invalid grades\n";
+		try {
+			Bureaucrat gerard("Gerard", 151);
+		} catch (std::exception & e) {
+			std::cerr << "Exception caught for Gerard: " << e.what() << std::endl;
+		}
+		try {
+			Bureaucrat mitchel("Mitchel", -1);
+		} catch (std::exception & e) {
+			std::cerr << "Exception caught for Mitchel: " << e.what() << std::endl;
+		}
+
 	}
 	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
