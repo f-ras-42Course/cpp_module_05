@@ -1,5 +1,5 @@
 
-NAME = bureaucrat
+NAME = form
 CC = c++
 CFLAGS = -Werror -Wextra -Wall
 INCLUDE = -I $(INCL_DIR)

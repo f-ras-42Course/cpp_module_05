@@ -4,17 +4,20 @@
 #include <stdexcept>
 #include <iostream>
 
+class Form; // Forward declaration
+
 class Bureaucrat {
 public:
 	Bureaucrat() = delete;
 	Bureaucrat(const std::string& name, int grade);
 	~Bureaucrat() = default;
-	Bureaucrat(const Bureaucrat& other) = default;
-	Bureaucrat& operator=(const Bureaucrat& other) = default;
+	Bureaucrat(const Bureaucrat& other);
+	Bureaucrat& operator=(const Bureaucrat& other);
 	const std::string& getName() const;
 	int getGrade() const;
 	void incrementGrade();
 	void decrementGrade();
+	void signForm(Form& form);
 
 	// Exception classes
 	class GradeTooHighException : public std::exception {
