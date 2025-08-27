@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <iostream>
 
+
 class Bureaucrat;
 
 class AForm {

@@ -10,5 +10,5 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& oth
 
 // Execute method
 void PresidentialPardonForm::executeAction() const {
-    std::cout << _target << " received a pardon." << std::endl;
+    std::cout << _target << " is pardoned by Zaphod Beeblebrox." << std::endl;
 }

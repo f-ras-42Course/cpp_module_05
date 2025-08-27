@@ -10,5 +10,15 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
 
 // Execute method
 void RobotomyRequestForm::executeAction() const {
-    std::cout << "Drilling noises... " << _target << " has been robotomized successfully." << std::endl;
+    sranddev();
+    if (rand() % 2 == true)
+    {
+        std::cout << "**PDDRRRRTTTTDDDD** Drilling noises fill the room..." \
+            << _target << " has been robotomized successfully." << std::endl;
+    }
+    else
+    {
+        std::cout << "Robotomy failed. Better luck next time." << std::endl;
+    }
 }
+
